@@ -1,0 +1,110 @@
+{
+    "cutoff": "2025-09-01",
+    "label_window": [
+        "2025-09-01",
+        "2025-09-30"
+    ],
+    "cohort_size": 1156,
+    "lapsed_customers": 443,
+    "retained_customers": 713,
+    "lapse_rate": 0.38321799307958476,
+    "training_rows": 924,
+    "test_rows": 232,
+    "baseline": {
+        "accuracy": 0.6163793103448276,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+    },
+    "logistic_regression": {
+        "best_parameters": {
+            "model__C": 100
+        },
+        "best_cv_f1": 0.650552962900789,
+        "test_metrics": {
+            "accuracy": 0.728448275862069,
+            "precision": 0.6444444444444445,
+            "recall": 0.651685393258427,
+            "f1": 0.6480446927374302,
+            "roc_auc": 0.801131452816846,
+            "confusion_matrix": [
+                [
+                    111,
+                    32
+                ],
+                [
+                    31,
+                    58
+                ]
+            ]
+        }
+    },
+    "random_forest": {
+        "best_parameters": {
+            "model__max_depth": 8,
+            "model__min_samples_leaf": 10
+        },
+        "best_cv_f1": 0.6828680972842264,
+        "test_metrics": {
+            "accuracy": 0.7413793103448276,
+            "precision": 0.6666666666666666,
+            "recall": 0.651685393258427,
+            "f1": 0.6590909090909091,
+            "roc_auc": 0.7816453209711637,
+            "confusion_matrix": [
+                [
+                    114,
+                    29
+                ],
+                [
+                    31,
+                    58
+                ]
+            ]
+        }
+    },
+    "oversampled_logistic_regression": {
+        "class_counts": {
+            "1": 570,
+            "0": 570
+        },
+        "test_metrics": {
+            "accuracy": 0.7155172413793104,
+            "precision": 0.5891472868217055,
+            "recall": 0.8539325842696629,
+            "f1": 0.6972477064220184,
+            "roc_auc": 0.7873025850553941,
+            "confusion_matrix": [
+                [
+                    90,
+                    53
+                ],
+                [
+                    13,
+                    76
+                ]
+            ]
+        }
+    },
+    "selected_model": "Random Forest",
+    "model_selection_basis": "Higher lapsed-class test F1 among the two original tuned models; oversampled logistic regression is reported separately.",
+    "selected_test_metrics": {
+        "accuracy": 0.7413793103448276,
+        "precision": 0.6666666666666666,
+        "recall": 0.651685393258427,
+        "f1": 0.6590909090909091,
+        "roc_auc": 0.7816453209711637,
+        "confusion_matrix": [
+            [
+                114,
+                29
+            ],
+            [
+                31,
+                58
+            ]
+        ]
+    },
+    "retention_list_count": 10,
+    "actually_lapsed_in_retention_list": 2
+}

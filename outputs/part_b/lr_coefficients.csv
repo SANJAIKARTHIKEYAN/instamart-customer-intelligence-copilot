@@ -1,0 +1,4 @@
+feature,coefficient,sign,absolute_coefficient
+numeric__frequency,-1.697332717394237,Negative,1.697332717394237
+categorical__favourite_category_Electronics,-1.1351667916839692,Negative,1.1351667916839692
+categorical__favourite_category_Grocery,-0.44930450064339045,Negative,0.44930450064339045

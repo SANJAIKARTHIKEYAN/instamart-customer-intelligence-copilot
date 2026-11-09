@@ -1,0 +1,47 @@
+REACT VS PLAN-AND-EXECUTE COMPARISON
+===================================
+
+1. REACT APPROACH
+
+ReAct combines reasoning and actions. The agent observes the
+customer request, calls a tool, examines its result and decides
+the next action.
+
+Actual benchmark results:
+- Scenarios: 7
+- Total model calls: 30
+- Total tokens: 11784
+- Average model calls: 4.29
+- Average tokens: 1683.43
+
+2. PLAN-AND-EXECUTE APPROACH
+
+Plan-and-Execute first creates a sequence of actions and then
+executes that plan. It can reduce repeated planning calls when
+requests follow a predictable workflow. However, unexpected
+tool observations may require replanning or human intervention.
+
+No Plan-and-Execute benchmark was implemented in this project,
+so comparative token and call savings are not claimed.
+
+3. UNEXPECTED OBSERVATIONS
+
+The missing order in S6 returned NOT_FOUND, allowing the agent
+to stop without attempting a refund.
+
+The cancelled order in S5 was denied because only completed
+orders qualify for refunds.
+
+These observations demonstrate why the agent must inspect
+actual tool results rather than blindly follow a fixed plan.
+
+4. SELECTED APPROACH
+
+ReAct is selected for this project because refund decisions
+depend on live tool observations, including order status,
+delivery time, policy retrieval and refund calculations.
+Its step-by-step approach supports safe decisions and human
+handoff when unexpected conditions occur.
+
+Plan-and-Execute may be more efficient for predictable workflows,
+but ReAct provides better flexibility for this support scenario.

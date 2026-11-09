@@ -1,0 +1,15 @@
+{
+  "run_id": "S1_checkpoint_demo",
+  "scenario_id": "S1",
+  "status": "REFUND",
+  "final_answer": "REFUND: INR 128.25 issued.",
+  "tokens_used": 1251,
+  "step_no": 4,
+  "llm_calls": 5,
+  "executed_tools": [
+    "get_order",
+    "search_policy",
+    "calculate_refund",
+    "issue_refund"
+  ]
+}
